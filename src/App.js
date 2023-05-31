@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import DragAndDrop from "./DragAndDrop";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+function App(props) {
+  const n = 5;
+  const [input, setInput] = useState(
+    new Array(n).fill({}).map((item, index) => ({
+      itemId: index,
+      val: Math.ceil(Math.random() * 100),
+    }))
   );
+  const reset = () => {
+    setInput(
+      new Array(n).fill({}).map((item, index) => ({
+        itemId: index,
+        val: Math.ceil(Math.random() * 100),
+      }))
+    );
+  };
+  return <DragAndDrop input={input} n={n} reset={reset} />;
 }
 
 export default App;
