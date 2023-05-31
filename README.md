@@ -35,6 +35,8 @@ You have to create a quiz game with the following features:
 - HTML
 - CSS
 - JavaScript
+- React Js
+- Tailwind CSS
 
 ## Getting Started
 
@@ -42,13 +44,5 @@ To play the game locally:
 
 1. Clone the repository: `git clone https://github.com/your-username/quiz-game.git`
 2. Navigate to the project directory.
-3. Open `index.html` in your web browser.
+3. Run `npm start` in command
 4. Start playing the game and enjoy!
-
-## Contributions
-
-Contributions to the project are welcome. Feel free to submit a pull request if you have any suggestions or want to add new features.
-
-## License
-
-This project is licensed under the MIT License.
